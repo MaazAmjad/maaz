@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching - Maaz Amjad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .site-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #666;
+            margin-right: 60px;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #333;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 80px;
+        }
+
+        .sidebar {
+            padding-top: 20px;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 200px;
+            border-radius: 0;
+            margin-bottom: 15px;
+            margin-left: 0;
+            object-fit: cover;
+            background-color: #f8f9fa;
+            display: block;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-info {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .contact-links {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .contact-links li {
+            margin-bottom: 12px;
+        }
+
+        .contact-links a {
+            color: #666;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #0066cc;
+        }
+
+        .contact-links i {
+            width: 20px;
+            font-size: 18px;
+        }
+
+        .content-area {
+            padding-top: 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .section p strong {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .section ul {
+            list-style: none;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .section ul li strong {
+            color: #333;
+            font-size: 17px;
+        }
+
+        .section ul li a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .course-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .course-item:last-child {
+            border-bottom: none;
+        }
+
+        .course-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .course-meta {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .course-objective {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="site-title">Maaz Amjad</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Biography</a></li>
+                <li><a href="teaching.html" class="active">Teaching</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <img src="maaz_new.png" alt="Maaz Amjad" class="profile-photo">
+            
+            <h2>Maaz Amjad</h2>
+            
+            <div class="sidebar-info">
+                Assistant Prof (Teaching Track)<br>
+                Texas Tech University<br>
+                Lubbock, Texas, United States
+            </div>
+
+            <ul class="contact-links">
+                <li><a href="mailto:Maaz.Amjad@ttu.edu"><i class="fa fa-envelope"></i> Email</a></li>
+                <li><a href="https://www.linkedin.com/in/maazmjad/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/MaazAmjad" target="_blank"><i class="fa fa-github"></i> Github</a></li>
+                <li><a href="https://scholar.google.com/citations?user=RqVvW3cAAAAJ&hl=en&authuser=1" target="_blank"><i class="fa fa-graduation-cap"></i> Google Scholar</a></li>
+                <li><a href="https://orcid.org/0000-0002-5969-9085" target="_blank"><i class="fa fa-id-card"></i> ORCID</a></li>
+                <li><a href="https://twitter.com/MaazAmjad13" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul>
+        </aside>
+
+        <div class="content-area">
+            <section class="section">
+                <h3>Teaching</h3>
+                
+                <h4>Fall 24, Spring 25, Fall 25</h4>
+                <div class="course-item">
+                    <div class="course-title">Concepts of Programming Languages</div>
+                    <div class="course-meta">Primary Instructor (one section)<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course will cover fundamental concepts of the majority of the thousands of programming languages: techniques for syntax and semantic analysis of programming languages and the major constructs and concepts of procedure, functional and logic languages. It aims to provide not only a unified view of (many) programming languages, but also the foundation which makes it easier for students to grasp/evaluate new languages and enables better programming (modeling) skills.</p>
+                    </div>
+                    <a href="syllabus/CS3361.pdf" target="_blank">[Syllabus]</a>
+                </div>
+
+                <h4>Fall 2025</h4>
+                <div class="course-item">
+                    <div class="course-title">Introduction to Engineering Design (2 sections)</div>
+                    <div class="course-meta">Primary Instructor<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course will introduce the fundamentals of engineering design process, DevSecOps and provide the foundations of integration with software development and information technology operations, provide foundational knowledge of application and web development through hands-on projects and a basic understanding of tools for application and web development. It also provide basic knowledge of Business Model Canvas and Lean LaunchPad methodologies.</p>
+                    </div>
+                    <a href="syllabus/ENGR1340.pdf" target="_blank">[Syllabus]</a>
+                </div>
+
+                <h4>Summer 1 2025</h4>
+                <div class="course-item">
+                    <div class="course-title">Introduction to Large Language Models</div>
+                    <div class="course-meta">Primary Instructor<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course covers the fundamental concepts of AI Agents in theory, design, and practice. It provides essential tools and libraries required to understand, design, and build AI agents and introduces various types of AI agents, such as simple reflex agents, model-based agents, goal-based agents, utility-based agents, and learning agents, highlight their differences, functions, and appropriate use cases. It discusses how to develop complex agentic workflows using Python frameworks, and provide best practices for creating advanced agents that leverage Large Language Models (LLMs) to reason, interact with environments, and achieve specific goals. This course prepares students to grasp more advanced topics, such as multi-agent and hierarchical multi-agent systems, build practical agentic AI applications, and thoughtfully consider the ethical implications of AI agents.</p>
+                    </div>
+                    <a href="syllabus/LLMs.pdf" target="_blank">[Syllabus]</a>
+                </div>
+
+                <div class="course-item">
+                    <div class="course-title">Introduction to AI Agents</div>
+                    <div class="course-meta">Primary Instructor<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course covers the fundamental concepts of AI Agents in theory, design, and practice. It provides essential tools and libraries required to understand, design, and build AI agents and introduces various types of AI agents, such as simple reflex agents, model-based agents, goal-based agents, utility-based agents, and learning agents, highlight their differences, functions, and appropriate use cases. It discusses how to develop complex agentic workflows using Python frameworks, and provide best practices for creating advanced agents that leverage Large Language Models (LLMs) to reason, interact with environments, and achieve specific goals. This course prepares students to grasp more advanced topics, such as multi-agent and hierarchical multi-agent systems, build practical agentic AI applications, and thoughtfully consider the ethical implications of AI agents.</p>
+                    </div>
+                    <a href="syllabus/AIAgents.pdf" target="_blank">[Syllabus]</a>
+                </div>
+
+
+                <h4>Spring 2025</h4>
+                <div class="course-item">
+                    <div class="course-title">Software Engineering</div>
+                    <div class="course-meta">Primary Instructor<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course will cover fundamental concepts of human-computer interaction (HCI), history and importance of HCI including theories of HCI design, modeling of computer users and interfaces. This course aims to provide an overview of empirical techniques for analyzing systems and interfaces, interface design, and styles of interaction. This course will also cover how to design, prototype, and evaluate prototypes and provide hands-on experience on building interactive user interface for various real-world applications. This course requires extensive computer use, and the setting for this course is mobile/web applications.</p>
+                    </div>
+                    <a href="syllabus/CS3366.pdf" target="_blank">[Syllabus]</a>
+                </div>
+
+                <div class="course-item">
+                    <div class="course-title">Pattern Recognition</div>
+                    <div class="course-meta">Primary Instructor<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course will cover fundamental concepts of pattern recognition, discuss how to implement machine learning and deep learning techniques to solve real-world tasks. It will also discuss different evaluation techniques to improve model performance.</p>
+                    </div>
+                    <a href="syllabus/PatternRecognition.pdf" target="_blank">[Syllabus]</a>
+                </div>
+
+                <h4>Fall 2024</h4>
+                <div class="course-item">
+                    <div class="course-title">Human Computer Interaction</div>
+                    <div class="course-meta">Primary Instructor<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course will cover fundamental concepts of human-computer interaction (HCI), history and importance of HCI including theories of HCI design, modeling of computer users and interfaces. This course aims to provide an overview of empirical techniques for analyzing systems and interfaces, interface design, and styles of interaction. This course will also cover how to design, prototype, and evaluate prototypes and provide hands-on experience on building interactive user interface for various real-world applications. This course requires extensive computer use, and the setting for this course is mobile/web applications.</p>
+                    </div>
+                    <a href="syllabus/CS3366.pdf" target="_blank">[Syllabus]</a>
+                </div>
+
+                <div class="course-item">
+                    <div class="course-title">Introduction to Computer Graphics</div>
+                    <div class="course-meta">Primary Instructor<br>Texas Tech University, Lubbock, Texas, United States</div>
+                    <div class="course-objective">
+                        <p><strong>Course Objective:</strong> This course covers fundamental concepts in computer graphics and provides hands-on coding experience for manipulating and displaying objects in both two and three dimensions. The main objective of this course is to provide solid understanding of key algorithmic techniques and mathematical foundations required for manipulating and displaying objects. The emphasis is on core principles of computational techniques in computer graphics and not solely on specific software tools.</p>
+                    </div>
+                    <a href="syllabus/computergraphics.pdf" target="_blank">[Syllabus]</a>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
